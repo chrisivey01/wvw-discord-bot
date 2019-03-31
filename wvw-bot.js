@@ -45,9 +45,9 @@ client.on("message", async (message) => {
         session.sessionShower(message, client);
     }
 
-    if (message.content.startsWith("!dm")) {
-        dm.dm(message, client);
-    }
+    // if (message.content.startsWith("!dm")) {
+    //     dm.dm(message, client);
+    // }
 })
 
 
