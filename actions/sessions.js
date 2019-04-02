@@ -22,16 +22,46 @@ module.exports = {
 
         let obtainedKills = newSessionKills - lastSessionKills 
 
-        message.channel.send("Your last session kills are " + lastSessionKills + ". Your new session is  " + newSessionKills + ". A total of " + obtainedKills + " obtained. ")
+        //calculate time
+        let dbTime = new Date(queryUserResults[0].time_stamp)
+        let currentTime = new Date();
 
-        "UPDATE users SET weekly_tally = ?, weekly_kill_total = ? WHERE api = ?";
+        //in ms
+        let msHours =  currentTime.getTime() - dbTime.getTime();
+        let answer = destructMS(msHours)
+        // answer = {d: 0, h: 0, m: 10, s: 54, ms: 263}
 
-        let updateKills = 'UPDATE account_info SET currentKills = ? WHERE uid = ? and api = ?'
+
+
+        message.channel.send("Your last session kills are " + lastSessionKills + ". Your new session is  " + newSessionKills + ". A total of " + obtainedKills + " obtained." +
+            "Within the last " + answer.d + " days, " + answer.h + " hours, " + answer.m+ " minutes, " + answer.s + " seconds since you've updated!")
+
+        // "UPDATE users SET weekly_tally = ?, weekly_kill_total = ? WHERE api = ?";
+
+        let updateKills = 'UPDATE account_info SET currentKills = ?, time_stamp = ? WHERE uid = ? and api = ?'
         let sqlObj = [
             newSessionKills,
+            currentTime,
             message.author.id,
             queryUserResults[0].api
         ]
         await pool.query(updateKills, sqlObj)
     }
+}
+
+destructMS = (milli) => {
+    if (isNaN(milli) || milli < 0) {
+        return null;
+    }
+
+    var d, h, m, s, ms;
+    s = Math.floor(milli / 1000);
+    m = Math.floor(s / 60);
+    s = s % 60;
+    h = Math.floor(m / 60);
+    m = m % 60;
+    d = Math.floor(h / 24);
+    h = h % 24;
+    ms = Math.floor((milli % 1000) * 1000) / 1000;
+    return { d: d, h: h, m: m, s: s, ms: ms };
 }
