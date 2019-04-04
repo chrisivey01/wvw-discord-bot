@@ -7,7 +7,9 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 module.exports = {
 
     sessionShower: async (message) => {
-        let queryUser = 'SELECT * FROM account_info WHERE uid = ?'
+        try {
+
+            let queryUser = 'SELECT * FROM account_info WHERE uid = ?'
         let queryUserResults = await pool.query(queryUser, message.author.id)
 
         let lastSessionKills = queryUserResults[0].currentKills
@@ -15,7 +17,6 @@ module.exports = {
 
         //need to obtain newSessions off gw2 api
         message.channel.send('Processing...')
-        try {
             let getKillResponse = await services.obtainAchievements(queryUserResults[0].api)
             await delay(1000)
             let killAchievements = getKillResponse.data.find(res => res.id === 283);
