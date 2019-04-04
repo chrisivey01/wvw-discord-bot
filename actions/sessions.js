@@ -49,7 +49,7 @@ module.exports = {
             await pool.query(updateKills, sqlObj)
         }catch(e){
             console.log(e.response)
-            message.channel.send('You are not verified - please kill yourself instead.')
+            message.channel.send('You are not verified - please !kill yourself instead.')
         }
     }
 }
