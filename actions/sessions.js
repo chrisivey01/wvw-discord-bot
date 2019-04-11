@@ -8,8 +8,7 @@ module.exports = {
 
     sessionShower: async (message) => {
         try {
-
-            let queryUser = 'SELECT * FROM account_info WHERE uid = ?'
+        let queryUser = 'SELECT * FROM account_info WHERE uid = ?'
         let queryUserResults = await pool.query(queryUser, message.author.id)
 
         let lastSessionKills = queryUserResults[0].currentKills

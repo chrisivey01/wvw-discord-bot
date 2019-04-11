@@ -36,7 +36,7 @@ module.exports = {
                 name: accountResponse.data.name,
                 currentKills: updatedkillResults.current
             };
-            let sql = "INSERT INTO account_info SET ? ON DUPLICATE KEY UPDATE api = VALUES(api), world = VALUES(world), name = VALUES(name), currentKills = VALUES(currentKills), time_stamp = VALUES(current_timestamp)";
+            let sql = "INSERT INTO account_info SET ? ON DUPLICATE KEY UPDATE api = VALUES(api), world = VALUES(world), name = VALUES(name), currentKills = VALUES(currentKills)";
 
             await pool.query(sql, faData, (err, result, field) => {
                 if (err) {
