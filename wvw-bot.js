@@ -1,17 +1,12 @@
-const Discord = require("discord.js");
-const axios = require("axios");
+import Discord from "discord.js";
+import axios from "axios";
+import config from "./auth.json";
+import registration from "./actions/registration.js";
+import session from "./actions/sessions.js";
+import matchUp from "./actions/matchup.js";
 const client = new Discord.Client();
-const config = require("./auth.json");
 
-
-const db = require('./database/db.js')
-const services = require('./gw2Services/services.js')
-const registration = require('./actions/registration.js')
-const session = require('./actions/sessions.js')
-const dm = require('./actions/dm-all-users.js')
-
-
-client.login(config.token)
+client.login(config.token);
 
 client.on("ready", () => {
     console.log("Bot online!");
@@ -45,10 +40,14 @@ client.on("message", async (message) => {
         session.sessionShower(message, client);
     }
 
+    if(message.content.startsWith("!match")){
+        matchUp.matchUp(message, client)
+    }
+
     // if (message.content.startsWith("!dm")) {
     //     dm.dm(message, client);
     // }
-})
+});
 
 
 

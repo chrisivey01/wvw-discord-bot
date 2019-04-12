@@ -1,6 +1,6 @@
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-module.exports = {
+export default {
     dm: async (message, client) => {
         let server = client.guilds.get("247928597883387905");
         let obtainedUser = server.members

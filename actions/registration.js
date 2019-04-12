@@ -1,20 +1,19 @@
-const services = require('../gw2Services/services.js')
-const pool = require('../database/db.js')
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-const axios = require("axios");
+import services from "../gw2Services/services.js";
+import pool from "../database/db.js";
+import axios from "axios";
 
-
-module.exports = {
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+export default {
 
     register: async (message, client) => {
         let api = message.content.replace('!api ', '');
         if (message.channel.type !== 'dm') {
             message.delete(message)
         }
-        let achievementUrl = `https://api.guildwars2.com/v2/account/achievements?access_token=${api}`
-        let accountUrl = `https://api.guildwars2.com/v2/account?access_token=${api}`
+        let achievementUrl = `https://api.guildwars2.com/v2/account/achievements?access_token=${api}`;
+        let accountUrl = `https://api.guildwars2.com/v2/account?access_token=${api}`;
         try {
-            await axios(achievementUrl)
+            await axios(achievementUrl);
             await delay(1000)
         } catch (e) {
             message.channel.send("An issue with registration -> " + e.response.data.text + ". Please resubmit your API with the progression checkbox on.")
@@ -22,11 +21,11 @@ module.exports = {
         }
         try {
             //obtain account Information
-            message.channel.send("Processing... one moment.")
-            let accountResponse = await axios(accountUrl)
-            await delay(1000)
-            let getKillResponse = await services.obtainAchievements(api)
-            await delay(1000)
+            message.channel.send("Processing... one moment.");
+            let accountResponse = await axios(accountUrl);
+            await delay(1000);
+            let getKillResponse = await services.obtainAchievements(api);
+            await delay(1000);
             let updatedkillResults = getKillResponse.data.find(res => res.id === 283);
 
             let faData = {
@@ -49,4 +48,4 @@ module.exports = {
             console.log(e.response)
         }
     }
-}
+};
