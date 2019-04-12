@@ -30,9 +30,8 @@ module.exports = {
 
             //in ms
             let msHours = currentTime.getTime() - dbTime.getTime();
-            let answer = this.destructMS(msHours);
+            let answer = module.exports.destructMS(msHours);
             // answer = {d: 0, h: 0, m: 10, s: 54, ms: 263}
-
 
             message.channel.send("Your last session kills are " + lastSessionKills + ". Your new session is  " + newSessionKills + ". A total of " + obtainedKills + " obtained." +
                 "Within the last " + answer.d + " days, " + answer.h + " hours, " + answer.m + " minutes, " + answer.s + " seconds since you've updated!")
@@ -45,10 +44,10 @@ module.exports = {
                 currentTime,
                 message.author.id,
                 queryUserResults[0].api
-            ]
+            ];
             await pool.query(updateKills, sqlObj)
         }catch(e){
-            console.log(e.response)
+            console.log(e.response);
             message.channel.send('You are not verified - please !kill yourself instead.')
         }
     },
