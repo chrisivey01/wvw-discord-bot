@@ -1,4 +1,6 @@
 const axios = require('axios');
+const world = require("./worldList");
+
 const tier1Api = "https://api.guildwars2.com/v2/wvw/matches/1-1";
 const tier2Api = "https://api.guildwars2.com/v2/wvw/matches/1-2";
 const tier3Api = "https://api.guildwars2.com/v2/wvw/matches/1-3";
@@ -23,15 +25,15 @@ module.exports =  {
             let redServer = worldArray.filter(red => getRed === red.id);
             let greenServer = worldArray.filter(green => getGreen === green.id);
 
-            message.channel.send(greenServer.name + " score: " + response.data.scores.green + "\n" +
-                blueServer.name + " score: " + response.data.scores.blue + "\n" +
-                redServer.name + " score: " + response.data.scores.red + "\n" +
-                greenServer.name + " kills: " + response.data.kills.green + "\n" +
-                blueServer.name + " kills: " + response.data.kills.blue + "\n" +
-                redServer.name + " kills: " + response.data.kills.red + "\n" +
-                greenServer.name + " deaths: " + response.data.deaths.green + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.blue + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.red + "\n");
+            message.channel.send(greenServer[0].name + " score: " + response.data.scores.green + "\n" +
+                blueServer[0].name + " score: " + response.data.scores.blue + "\n" +
+                redServer[0].name + " score: " + response.data.scores.red + "\n" +
+                greenServer[0].name + " kills: " + response.data.kills.green + "\n" +
+                blueServer[0].name + " kills: " + response.data.kills.blue + "\n" +
+                redServer[0].name + " kills: " + response.data.kills.red + "\n" +
+                greenServer[0].name + " deaths: " + response.data.deaths.green + "\n" +
+                blueServer[0].name + " deaths: " + response.data.deaths.blue + "\n" +
+                redServer[0].name + " deaths: " + response.data.deaths.red + "\n");
         }else if(message.channel.id === tier2ChannelId){
             let response = await axios(tier2Api);
             let getBlue = response.data.worlds.blue;
@@ -42,15 +44,15 @@ module.exports =  {
             let redServer = worldArray.filter(red => getRed === red.id);
             let greenServer = worldArray.filter(green => getGreen === green.id);
 
-            message.channel.send(greenServer.name + " score: " + response.data.scores.green + "\n" +
-                blueServer.name + " score: " + response.data.scores.blue + "\n" +
-                redServer.name + " score: " + response.data.scores.red + "\n" +
-                greenServer.name + " kills: " + response.data.kills.green + "\n" +
-                blueServer.name + " kills: " + response.data.kills.blue + "\n" +
-                redServer.name + " kills: " + response.data.kills.red + "\n" +
-                greenServer.name + " deaths: " + response.data.deaths.green + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.blue + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.red + "\n");
+            message.channel.send(greenServer[0].name + " score: " + response.data.scores.green + "\n" +
+                blueServer[0].name + " score: " + response.data.scores.blue + "\n" +
+                redServer[0].name + " score: " + response.data.scores.red + "\n" +
+                greenServer[0].name + " kills: " + response.data.kills.green + "\n" +
+                blueServer[0].name + " kills: " + response.data.kills.blue + "\n" +
+                redServer[0].name + " kills: " + response.data.kills.red + "\n" +
+                greenServer[0].name + " deaths: " + response.data.deaths.green + "\n" +
+                blueServer[0].name + " deaths: " + response.data.deaths.blue + "\n" +
+                redServer[0].name + " deaths: " + response.data.deaths.red + "\n");
 
         }else if(message.channel.id === tier3ChannelId){
             let response = await axios(tier3Api);
@@ -62,15 +64,15 @@ module.exports =  {
             let redServer = worldArray.filter(red => getRed === red.id);
             let greenServer = worldArray.filter(green => getGreen === green.id);
 
-            message.channel.send(greenServer.name + " score: " + response.data.scores.green + "\n" +
-                blueServer.name + " score: " + response.data.scores.blue + "\n" +
-                redServer.name + " score: " + response.data.scores.red + "\n" +
-                greenServer.name + " kills: " + response.data.kills.green + "\n" +
-                blueServer.name + " kills: " + response.data.kills.blue + "\n" +
-                redServer.name + " kills: " + response.data.kills.red + "\n" +
-                greenServer.name + " deaths: " + response.data.deaths.green + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.blue + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.red + "\n");
+            message.channel.send(greenServer[0].name + " score: " + response.data.scores.green + "\n" +
+                blueServer[0].name + " score: " + response.data.scores.blue + "\n" +
+                redServer[0].name + " score: " + response.data.scores.red + "\n" +
+                greenServer[0].name + " kills: " + response.data.kills.green + "\n" +
+                blueServer[0].name + " kills: " + response.data.kills.blue + "\n" +
+                redServer[0].name + " kills: " + response.data.kills.red + "\n" +
+                greenServer[0].name + " deaths: " + response.data.deaths.green + "\n" +
+                blueServer[0].name + " deaths: " + response.data.deaths.blue + "\n" +
+                redServer[0].name + " deaths: " + response.data.deaths.red + "\n");
         }else if(message.channel.id === tier4ChannelId){
             let response = await axios(tier4Api);
             let getBlue = response.data.worlds.blue;
@@ -81,15 +83,15 @@ module.exports =  {
             let redServer = worldArray.filter(red => getRed === red.id);
             let greenServer = worldArray.filter(green => getGreen === green.id);
 
-            message.channel.send(greenServer.name + " score: " + response.data.scores.green + "\n" +
-                blueServer.name + " score: " + response.data.scores.blue + "\n" +
-                redServer.name + " score: " + response.data.scores.red + "\n" +
-                greenServer.name + " kills: " + response.data.kills.green + "\n" +
-                blueServer.name + " kills: " + response.data.kills.blue + "\n" +
-                redServer.name + " kills: " + response.data.kills.red + "\n" +
-                greenServer.name + " deaths: " + response.data.deaths.green + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.blue + "\n" +
-                blueServer.name + " deaths: " + response.data.deaths.red + "\n");
+            message.channel.send(greenServer[0].name + " score: " + response.data.scores.green + "\n" +
+                blueServer[0].name + " score: " + response.data.scores.blue + "\n" +
+                redServer[0].name + " score: " + response.data.scores.red + "\n" +
+                greenServer[0].name + " kills: " + response.data.kills.green + "\n" +
+                blueServer[0].name + " kills: " + response.data.kills.blue + "\n" +
+                redServer[0].name + " kills: " + response.data.kills.red + "\n" +
+                greenServer[0].name + " deaths: " + response.data.deaths.green + "\n" +
+                blueServer[0].name + " deaths: " + response.data.deaths.blue + "\n" +
+                redServer[0].name + " deaths: " + response.data.deaths.red + "\n");
         }else{
             message.channel.send("This only works in match up channels.")
         }
