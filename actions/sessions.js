@@ -1,11 +1,11 @@
-import pool from "../database/db.js";
-import services from "../gw2Services/services.js";
+const pool = require("../database/db.js");
+const services = require( "../gw2Services/services.js");
 
 // const axios = require("axios");
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 
-export default {
+module.exports = {
 
     sessionShower: async (message) => {
         try {

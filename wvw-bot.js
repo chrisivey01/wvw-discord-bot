@@ -1,9 +1,8 @@
-import Discord from "discord.js";
-import axios from "axios";
-import config from "./auth.json";
-import registration from "./actions/registration.js";
-import session from "./actions/sessions.js";
-import matchUp from "./actions/matchup.js";
+const Discord = require("discord.js");
+const config = require("./auth.json");
+const registration = require("./actions/registration.js");
+const session = require("./actions/sessions.js");
+const matchUp = require("./actions/matchup.js");
 const client = new Discord.Client();
 
 client.login(config.token);

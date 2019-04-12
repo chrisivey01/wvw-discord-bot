@@ -1,9 +1,9 @@
-import services from "../gw2Services/services.js";
-import pool from "../database/db.js";
-import axios from "axios";
+const services = require("../gw2Services/services.js");
+const pool = require("../database/db.js");
+const axios = require("axios");
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-export default {
+module.exports =  {
 
     register: async (message, client) => {
         let api = message.content.replace('!api ', '');

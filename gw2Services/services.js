@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require('axios');
 const accountUrl = 'https://api.guildwars2.com/v2/account?access_token='
 const achievementUrl = 'https://api.guildwars2.com/v2/account/achievements?access_token='
 
