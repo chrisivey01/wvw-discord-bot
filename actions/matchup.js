@@ -24,8 +24,8 @@ module.exports =  {
                 "Blue kills: " + response.data.kills.blue + "\n" +
                 "Red kills: " + response.data.kills.red + "\n" +
                 "Green deaths: " + response.data.deaths.green + "\n" +
-                "Blue deaths: " + response.data.kills.blue + "\n" +
-                "Red deaths: " + response.data.kills.red + "\n");
+                "Blue deaths: " + response.data.deaths.blue + "\n" +
+                "Red deaths: " + response.data.deaths.red + "\n");
         }else if(message.channel.id === tier2ChannelId){
             let response = await axios(tier2Api);
 
@@ -36,8 +36,8 @@ module.exports =  {
                 "Blue kills: " + response.data.kills.blue + "\n" +
                 "Red kills: " + response.data.kills.red + "\n" +
                 "Green deaths: " + response.data.deaths.green + "\n" +
-                "Blue deaths: " + response.data.kills.blue + "\n" +
-                "Red deaths: " + response.data.kills.red + "\n");
+                "Blue deaths: " + response.data.deaths.blue + "\n" +
+                "Red deaths: " + response.data.deaths.red + "\n");
         }else if(message.channel.id === tier3ChannelId){
             let response = await axios(tier3Api);
 
@@ -48,8 +48,8 @@ module.exports =  {
                 "Blue kills: " + response.data.kills.blue + "\n" +
                 "Red kills: " + response.data.kills.red + "\n" +
                 "Green deaths: " + response.data.deaths.green + "\n" +
-                "Blue deaths: " + response.data.kills.blue + "\n" +
-                "Red deaths: " + response.data.kills.red + "\n");
+                "Blue deaths: " + response.data.deaths.blue + "\n" +
+                "Red deaths: " + response.data.deaths.red + "\n");
         }else if(message.channel.id === tier4ChannelId){
             let response = await axios(tier4Api);
 
@@ -60,8 +60,8 @@ module.exports =  {
                 "Blue kills: " + response.data.kills.blue + "\n" +
                 "Red kills: " + response.data.kills.red + "\n" +
                 "Green deaths: " + response.data.deaths.green + "\n" +
-                "Blue deaths: " + response.data.kills.blue + "\n" +
-                "Red deaths: " + response.data.kills.red + "\n");
+                "Blue deaths: " + response.data.deaths.blue + "\n" +
+                "Red deaths: " + response.data.deaths.red + "\n");
         }else{
             message.channel.send("This only works in match up channels.")
         }
