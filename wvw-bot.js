@@ -43,9 +43,9 @@ client.on("message", async (message) => {
         matchUp.matchUp(message, client)
     }
 
-    // if (message.content.startsWith("!dm")) {
-    //     dm.dm(message, client);
-    // }
+    if (message.content.startsWith("!dm")) {
+        dm.dm(message, client);
+    }
 });
 
 
