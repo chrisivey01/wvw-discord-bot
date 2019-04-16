@@ -3,6 +3,7 @@ const config = require("./auth.json");
 const registration = require("./actions/registration.js");
 const session = require("./actions/sessions.js");
 const matchUp = require("./actions/matchup.js");
+const dm = require("./actions/dm-all-users.js");
 const client = new Discord.Client();
 
 client.login(config.token);
