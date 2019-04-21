@@ -41,6 +41,12 @@ module.exports =  {
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
 
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
+
             message.channel.send(
                 {
                     "embed":{
@@ -65,6 +71,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
@@ -84,6 +95,12 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
             message.channel.send(
 
                 {
@@ -109,6 +126,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
@@ -127,6 +149,12 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
             message.channel.send(
 
                 {
@@ -152,6 +180,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
@@ -171,6 +204,12 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
             message.channel.send(
                 {
                     "embed": {
@@ -197,6 +236,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
+                                "inline": true
+                            },
 
                         ]
                     }
@@ -214,6 +258,12 @@ module.exports =  {
                 let greenKdr = response.data.kills.green / response.data.deaths.green;
                 let blueKdr = response.data.kills.blue / response.data.deaths.blue;
                 let redKdr = response.data.kills.red / response.data.deaths.red;
+
+                //obtain skirmish data from gw2
+                let skirmishResults = response.data.skirmishes;
+                //store it and remove the final input
+
+                let skirmish = skirmishResults.pop();
                 message.channel.send(
                     {
                         "embed":{
@@ -240,6 +290,11 @@ module.exports =  {
                                     "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
                                     "inline": true
                                 },
+                                {
+                                    "name": "Current Skirmish",
+                                    "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
+                                    "inline": true
+                                },
 
                             ]
                         }
@@ -256,6 +311,12 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
             message.channel.send(
                 {
                     "embed":{
@@ -280,6 +341,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
@@ -298,6 +364,12 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
             message.channel.send(
                 {
                     "embed":{
@@ -322,6 +394,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
@@ -340,6 +417,13 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
+
             message.channel.send(
                 {
                     "embed":{
@@ -364,6 +448,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
@@ -382,6 +471,13 @@ module.exports =  {
             let greenKdr = response.data.kills.green / response.data.deaths.green;
             let blueKdr = response.data.kills.blue / response.data.deaths.blue;
             let redKdr = response.data.kills.red / response.data.deaths.red;
+
+            //obtain skirmish data from gw2
+            let skirmishResults = response.data.skirmishes;
+            //store it and remove the final input
+
+            let skirmish = skirmishResults.pop();
+
             message.channel.send(
                 {
                     "embed":{
@@ -406,6 +502,11 @@ module.exports =  {
                             {
                                 "name": "KDR",
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + greenKdr.toFixed(2) + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + blueKdr.toFixed(2) + "\n" + redServer[0].name.padStart(3, ' ') + ": " + redKdr.toFixed(2) + "```",
+                                "inline": true
+                            },
+                            {
+                                "name": "Current Skirmish",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
 
