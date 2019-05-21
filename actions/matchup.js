@@ -78,7 +78,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
-
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
                         ]
                     } }
             );
@@ -133,7 +137,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
-
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
                         ]
                     }
                 })
@@ -187,6 +195,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
 
                         ]
                     }
@@ -241,6 +254,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
 
                         ]
                     }
@@ -295,6 +313,11 @@ module.exports =  {
                                     "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                     "inline": true
                                 },
+                                {
+                                    "name": "Victory Points",
+                                    "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                    "inline": true
+                                }
 
                             ]
                         }
@@ -348,6 +371,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
 
                         ]
                     }
@@ -401,6 +429,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
 
                         ]
                     }
@@ -455,6 +488,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
 
                         ]
                     }
@@ -509,6 +547,11 @@ module.exports =  {
                                 "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + skirmish.scores.red  + "```",
                                 "inline": true
                             },
+                            {
+                                "name": "Victory Points",
+                                "value": "```" + greenServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.green + "\n" + blueServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.blue + "\n" + redServer[0].name.padStart(3, ' ') + ": " + response.data.victory_points.red + "```",
+                                "inline": true
+                            }
 
                         ]
                     }
